@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="SSPP.controller.RegistroPresoHandler"
+          hgap="10" vgap="10" alignment="CENTER">
+
+    <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="nombreField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label text="Apellido:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="apellidoField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Fecha de Nacimiento:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="fechaNacimientoPicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label text="Tipo de Documento:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <ComboBox fx:id="tipoDocumentoCombo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Número de Documento:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="documentoField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label text="Prisión:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <ComboBox fx:id="prisionCombo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Label text="Nacionalidad:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <ComboBox fx:id="nacionalidadCombo" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <Label text="Conducta:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <Slider fx:id="conductaSlider" min="1" max="100" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    <Label fx:id="conductaLabel" text="50" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+
+    <Button text="Registrar" fx:id="registrarButton" onAction="#registrarPreso" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Button text="Volver al Menú Principal" fx:id="volverButton" onAction="#volverAlMenuPrincipal" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.halignment="CENTER" />
+</GridPane>

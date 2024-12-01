@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="SSPP.controller.VisualizacionPresosHandler"
+            prefWidth="1000"
+            prefHeight="600">
+
+    <!-- Parte Superior: Título -->
+    <top>
+        <Label text="Visualización de Presos" style="-fx-font-size: 20px; -fx-font-weight: bold;" BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Parte Izquierda: Opciones de filtrado -->
+    <left>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Filtrar Presos" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            
+            <!-- Filtro: Talleres -->
+            <Label text="Filtrar por Taller:" />
+            <ComboBox fx:id="filtroTallerComboBox" promptText="Seleccione un taller..." />
+            
+            <!-- Botón para Aplicar Filtros -->
+            <Button text="Aplicar Filtros" onAction="#aplicarFiltroTaller" />
+        </VBox>
+    </left>
+
+    <!-- Parte Central: Tabla de Presos -->
+    <center>
+        <TableView fx:id="tablaPresosTableView" prefWidth="800">
+            <columns>
+                <TableColumn text="ID" fx:id="columnaId" prefWidth="50" />
+                <TableColumn text="Nombre" fx:id="columnaNombre" prefWidth="150" />
+                <TableColumn text="Apellido" fx:id="columnaApellido" prefWidth="150" />
+                <TableColumn text="Fecha de Nacimiento" fx:id="columnaFechaNacimiento" prefWidth="150" />
+                <TableColumn text="Prisión" fx:id="columnaPrision" prefWidth="150" />
+                <TableColumn text="Conducta" fx:id="columnaConducta" prefWidth="100" />
+                <TableColumn text="Tipo de Documento" fx:id="columnaTipoDocumento" prefWidth="150" />
+                <TableColumn text="Número de Documento" fx:id="columnaNumeroDocumento" prefWidth="150" />
+                <TableColumn text="Nacionalidad" fx:id="columnaNacionalidad" prefWidth="150" />
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- Parte Inferior: Botones de Navegación -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Regresar al Menú Principal" onAction="#volverAlMenuPrincipal" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="SSPP.controller.RegistroSentenciaHandler"
+          hgap="10" vgap="10" alignment="CENTER">
+
+    <!-- Cuadro de búsqueda y lista de reclusos -->
+    <Label text="Buscar Recluso:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="buscarReclusoField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <ListView fx:id="reclusoListView" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+
+    <!-- Fecha de Sentencia -->
+    <Label text="Fecha de Sentencia:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <DatePicker fx:id="fechaSentenciaPicker" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <!-- Condena Total -->
+    <Label text="Condena Total (años):" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="condenaTotalField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <!-- Detalles de la Sentencia -->
+    <Label text="Detalles de la Sentencia:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextArea fx:id="detallesArea" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <!-- Comentarios del Registrador -->
+    <Label text="Comentarios del Registrador:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextArea fx:id="comentariosArea" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <!-- Crímenes Asociados -->
+    <Label text="Crímenes Asociados:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <ListView fx:id="crimenesListView" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <!-- Agregar Crimen -->
+    <Button text="Agregar Crimen" fx:id="agregarCrimenButton" onAction="#agregarCrimen" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.halignment="CENTER" />
+
+    <!-- Tipo de Sentencia -->
+    <Label text="Tipo de Sentencia:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+    <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="10">
+        <RadioButton text="Actual" fx:id="sentenciaActualRadioButton" />
+        <RadioButton text="Pasada" fx:id="sentenciaPasadaRadioButton" />
+    </HBox>
+
+    <!-- Botones -->
+    <Button text="Finalizar Registro" fx:id="finalizarButton" onAction="#finalizarRegistro" GridPane.columnIndex="1" GridPane.rowIndex="11" GridPane.halignment="CENTER" />
+    <Button text="Volver" fx:id="volverButton" onAction="#volverAlMenuPrincipal" GridPane.columnIndex="1" GridPane.rowIndex="12" GridPane.halignment="CENTER" />
+</GridPane>
